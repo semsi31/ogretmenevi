@@ -1,0 +1,25 @@
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: ogretmenevi-mssql
+    restart: unless-stopped
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrong!Passw0rd
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql
+
+  azurite:
+    image: mcr.microsoft.com/azure-storage/azurite
+    container_name: ogretmenevi-azurite
+    restart: unless-stopped
+    command: azurite-blob --loose --blobHost 0.0.0.0 --location /data --debug /data/debug.log
+    ports:
+      - "10000:10000"
+    volumes:
+      - ./_data/azurite:/data
+
+volumes:
+  mssql-data:

@@ -1,0 +1,4 @@
+pnpm -F ogretmenevi-mobile add tslib
+npx expo start -c
+npx expo run:android
+

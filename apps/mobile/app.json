@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "Ogretmenevi",
+    "slug": "ogretmenevi",
+    "scheme": "antakyaogretmenevi",
+    "version": "1.0.0",
+    "sdkVersion": "53.0.0",
+    "android": {
+      "package": "com.ogretmenevi.app",
+      "permissions": [],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            { "scheme": "https", "host": "ogretmenevi.app", "pathPrefix": "/" },
+            { "scheme": "antakyaogretmenevi" }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "plugins": [
+      [
+        "sentry-expo",
+        {
+          "url": "${EXPO_PUBLIC_SENTRY_DSN:-}"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "useLegacyPackaging": true,
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      "expo-asset",
+      "expo-router",
+      "expo-web-browser"
+    ],
+    "extra": {
+      "API_BASE": "http://10.0.2.2:4000"
+    }
+  }
+}

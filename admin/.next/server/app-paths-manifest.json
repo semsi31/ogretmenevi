@@ -1,0 +1,8 @@
+{
+  "/admin/home/page": "app/admin/home/page.js",
+  "/admin/yemek/page": "app/admin/yemek/page.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/admin/kesfet/page": "app/admin/kesfet/page.js",
+  "/admin/slider/page": "app/admin/slider/page.js",
+  "/admin/feedback/page": "app/admin/feedback/page.js"
+}
