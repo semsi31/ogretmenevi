@@ -45,3 +45,5 @@ pnpm-debug.log*
 
 # Assets maps
 **/assets/*.map
+
+*.keystore
